@@ -20,6 +20,7 @@ public class AddressBookMain {
 		System.out.println(" 1. Create Contact ");
 		System.out.println(" 2. Add New Contact ");
 		System.out.println(" 3. Edit Contact ");
+		System.out.println(" 4. Delete Contact ");
 		System.out.println("-->> Enter Option :: ");
 		byte option = getDetailInput.nextByte();
 		switch(option) {
@@ -35,6 +36,10 @@ public class AddressBookMain {
 		case 3:
 			System.out.println(" Update Details :: "+ '\n' + "Enter Your FirstName :: ");
 			inBook.editByName(getDetailInput.next());
+			break;
+		case 4:
+			System.out.println(" Delete Details :: "+ '\n' + "Enter FirstName :: ");
+			inBook.deleteByFirstName(getDetailInput.next());
 			break;
 		}
 		
