@@ -13,15 +13,35 @@ public class AddressBookMain {
 	public static void main(String[] args) {
 		InterfaceAddressBook inBook = new ImplementationsOfAddressBook();
 		
-		inBook.welcomeDisplay();
-		System.out.println(" 1. Add New Contact ");
+		Contacts contacts =null; byte menuExitNumber = 0;
 		
-		Contacts contacts = getContacts();
-		System.out.println("Added Contact Details :: "+'\n'+contacts);
+		inBook.welcomeDisplay(); //welcome_message
+		do {
+		System.out.println(" 1. Create Contact ");
+		System.out.println(" 2. Add New Contact ");
+		System.out.println("-->> Enter Option :: ");
+		byte option = getDetailInput.nextByte();
+		switch(option) {
+		case 1:							//added contact
+			contacts = getContacts();
+			System.out.println("Added Contact Details :: "+'\n'+contacts);
+			break;
+		case 2:							//created contact
+			contacts = getContacts();
+			int index = inBook.createContactDetails(contacts);
+			System.out.println(" Contact_ID :: " + index+'\n'+contacts);
+			break;
+		}
+		
+		System.out.println('\n'+" Press 1 :: To check previous options again " + '\n' + " Press 6 :: To Log Out ");
+		menuExitNumber = getDetailInput.nextByte();
+		}while(menuExitNumber==1);	
+		
+		System.err.println("===================================");
+		System.out.println("  ::    Address_Book Closed    ::  ");
+		System.err.println("==================================="+'\n');
 		
 		
-		
-
 	}
 	
 	private static Contacts getContacts() {
