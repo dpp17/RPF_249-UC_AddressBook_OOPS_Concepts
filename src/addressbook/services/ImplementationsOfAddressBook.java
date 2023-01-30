@@ -115,4 +115,37 @@ public class ImplementationsOfAddressBook implements InterfaceAddressBook{
 				System.out.println("");
 			}
 		}
+
+		public void deleteByFirstName(String firstname) {
+			System.out.println(":: Entry Deleted ::");
+			for(int i = 0; i <storeContactDelails.length; i++) {
+				Contacts contacts = storeContactDelails[i];
+				if(null != contacts && firstname.equals(firstname)) {
+					
+					 storeContactDelails[i] = null;
+				}
+			}
+			showAllContacts();
+			for(int i = 0; i < storeContactDelails.length; i++) {
+				for(int j = i+1; j < storeContactDelails.length ; j++) {
+					if(null == storeContactDelails[i] ) {
+						storeContactDelails[i] = storeContactDelails[j];
+						storeContactDelails[j] = null;
+					}
+				}
+			}
+		}
+		
+		private void showAllContacts() {
+			System.out.println("*************** : All Available Contacts- : ***************");
+			for(int i = 0; i < storeContactDelails.length; i++) {
+				Contacts contacts = storeContactDelails[i];
+				if(null != storeContactDelails[i]) {
+				System.out.println(" Serial No.:: ABRN_ "+ i );
+				contactDetailsPrint(contacts);
+				}	
+			}
+		}
+		
+		
 }
