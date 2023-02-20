@@ -86,7 +86,7 @@ public class ImplementationsOfAddressBook implements InterfaceAddressBook{
 					break;
 				case 8:
 						System.out.println(" AadharNumber :: ");
-						con.setAadharNumber(getDetailInput.nextLong());
+						con.setAadharCardNumber(getDetailInput.nextLong());
 					break;
 				case 9:
 						System.out.println(" Email_ID :: ");
@@ -110,7 +110,7 @@ public class ImplementationsOfAddressBook implements InterfaceAddressBook{
 				System.out.println(" State :: " + contacts.getState());
 				System.out.println(" Zip :: " + contacts.getZip());
 				System.out.println(" PhoneNumber :: " + contacts.getPhoneNumber());
-				System.out.println(" AadharCard Number :: " + contacts.getAadharNumber());
+				System.out.println(" AadharCard Number :: " + contacts.getAadharCardNumber());
 				System.out.println(" Email ID:: " + contacts.getEmail());
 				System.out.println("");
 			}

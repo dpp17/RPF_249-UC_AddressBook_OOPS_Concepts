@@ -10,8 +10,7 @@ public class Contacts {
 	private String email;
 	private int zip;
 	private long phoneNumber;
-	private long aadharNumber;
-	
+	private long aadharCardNumber;
 	
 	public String getFirstName() {
 		return firstName;
@@ -61,17 +60,18 @@ public class Contacts {
 	public void setPhoneNumber(long phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-	public long getAadharNumber() {
-		return aadharNumber;
+	public long getAadharCardNumber() {
+		return aadharCardNumber;
 	}
-	public void setAadharNumber(long aadharNumber) {
-		this.aadharNumber = aadharNumber;
+	public void setAadharCardNumber(long aadharCardNumber) {
+		this.aadharCardNumber = aadharCardNumber;
 	}
 	@Override
 	public String toString() {
 		return "Contacts [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city=" + city
 				+ ", state=" + state + ", email=" + email + ", zip=" + zip + ", phoneNumber=" + phoneNumber
-				+ ", aadharNumber=" + aadharNumber + "]";
+				+ ", aadharCardNumber=" + aadharCardNumber + "]";
 	}
+
 	
 }

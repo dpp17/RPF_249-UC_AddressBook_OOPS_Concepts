@@ -77,12 +77,12 @@ public class AddressBookMain {
 		
 		System.out.println(" Enter Zip:");
 		contacts.setZip(getDetailInput.nextInt());
-		
+	
 		System.out.println(" Enter Phone_Number:");
 		contacts.setPhoneNumber(getDetailInput.nextLong());
 		
 		System.out.println(" Enter Aadhar_Number:");
-		contacts.setAadharNumber(getDetailInput.nextLong());
+		contacts.setAadharCardNumber(getDetailInput.nextLong());
 		
 		return contacts;
 	}
